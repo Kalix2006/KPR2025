@@ -1,0 +1,19 @@
+.header{
+    background-color: blueviolet;
+    color: blue;
+}
+.header:hover{
+    background-color: blanchedalmond;
+    color: brown;
+}
+#two{
+    color: aqua;
+}
+#a,#b,#c{ color: aquamarine;}
+*{color: burlywood;}
+.linkone{
+    background-color: black;
+    border-radius: 20px;
+    padding: 10px;
+}
+.linkone:hover{background-color: rgb(234, 212, 212);border-radius: 20px;}
