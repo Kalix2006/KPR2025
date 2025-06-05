@@ -3,6 +3,27 @@
 <head>
     
     <title>Document</title>
+    <style>
+        nav{
+            display: flex;
+            justify-content: space-around;
+            background-color: rgb(199, 174, 174);
+            padding: 10px;
+        }
+        a{
+            text-decoration: none;
+            background-color: blue;
+            color: aliceblue;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 10px 10px 10px black;
+            text-shadow: 5px 5px 5px black;
+        }
+        a:hover{
+            background-color: aqua;
+            color: darkblue;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -10,7 +31,7 @@
         <nav>
             <a href="#tamil">tamil</a>
             <a href="#eng">english</a>
-            <a href="#mat" style="height: 500px;">math</a>
+            <a href="#mat">math</a>
         </nav>
     </header>
     <section id="tamil" style="height: 500px;">
@@ -28,6 +49,10 @@
             <span>mat</span>
         </div>
     </section>
-   <footer>thanks</footer>
+   <footer>
+    <div>
+        <span>thank you</span>
+    </div>
+   </footer>
 </body>
 </html>
