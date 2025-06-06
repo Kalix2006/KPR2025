@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="message">vanakkamda mapla</h1>
+    <button onclick="changetext()">thottu paaru</button>
+    <input type="text" id="name" placeholder="enter name">
+    <button onclick="addname()">add</button>
+    <ol id="display">
+        <li>raja</li>
+    </ol>
+    <script>
+        function addname(){
+            const name=document.getElementById('name').value
+            const li=document.createElement('li')
+            li.textContent=name
+            document.getElementById('display').append(li)
+        }
+    </script>
+    <script>
+        function changetext()
+        {
+            const elmnt=document.getElementById('message');
+            elmnt.innerText="vanakkamda mapla pollachi la irunthu"
+            elmnt.style.backgroundColor="green"
+            elmnt.style.color="black"
+        }
+    </script>
+</body>
+</html>
