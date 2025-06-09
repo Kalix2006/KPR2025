@@ -15,10 +15,10 @@ function sum()
 {
     console.log(a+b)
 }
-var sum=()=>{
+var sum=(a,b)=>{
     return(a+b)
 }
-console.log(sum())
+console.log(sum(120,20))
 var marks=[90,89,58];
 var [m1,m2,m3]=marks;
 var venki=m1;
