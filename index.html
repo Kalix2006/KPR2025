@@ -1,32 +1,72 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <title>KPRCAS2025</title>
-    <link rel="stylesheet" href="./CSS/style.css">
-    <style>
-        h2{ color: chartreuse;}
-    </style>
+  <title>Student Information Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+    input {
+      padding: 5px;
+      margin-top: 5px;
+    }
+    button {
+      margin-top: 15px;
+      padding: 8px 15px;
+    }
+    ul {
+      margin-top: 20px;
+    }
+    .entry {
+      margin-bottom: 10px;
+      background: #f4f4f4;
+      padding: 10px;
+      border-radius: 5px;
+    }
+  </style>
 </head>
-<body style="background-color: white;">
-    <h1 style="color: blueviolet; font-size: 100px; font-weight: bold;">hello</h1>
-    <h2>kprcas</h2>
-    <h3>i'm</h3>
-    <h4>coming</h4>
-    <h5>for</h5>
-    <h6>you</h6>
-    <p class="header"><b>Lorem </b><br><i><u>ipsum </u></i><strong>dolor </strong><em>sit</em> <q>amet </q>consectetur adipisicing elit. Atque sed, rerum quo reiciendis odio cupiditate?</p>
-    <ol>
-        <li id="a">bca</li>
-        <li id="b">b.com b&i</li>
-        <li id="c">csda</li>
-    </ol>
-    <ul id="two">
-        <li>bca</li>
-        <li>b.com b&i</li>
-        <li>csda</li>
-    </ul>
-    <a class="linkone" href="https://www.moviesda.run/"target="_blank">latest 4k tamil movies</a>
-    <a class="linkone" href="home.html">home</a>
-    <a class="linkone" href="form.html">form</a>
+<body style="background-image: url('./assets/Minimalistic\ Mountain\ Sunset\ 562023.png');background-size: cover;background-repeat: no-repeat;">
+
+  <h2>Student Information Form</h2>
+  <form id="studentForm">
+    <label>Name:</label>
+    <input type="text" id="name" required>
+    <label>Department:</label>
+    <input type="text" id="department" required>
+    <label>Roll No:</label>
+    <input type="text" id="rollNo" required>
+    <label>Year of Study:</label>
+    <input type="text" id="year" required>
+    <button type="submit">Submit</button>
+  </form>
+  <h3>Submitted Data:</h3>
+  <div id="dataList"></div>
+  <script>
+    const form = document.getElementById('studentForm');
+    const dataList = document.getElementById('dataList');
+    form.addEventListener('submit', function(event) {
+      event.preventDefault();
+      const name = document.getElementById('name').value;
+      const department = document.getElementById('department').value;
+      const rollNo = document.getElementById('rollNo').value;
+      const year = document.getElementById('year').value;
+      const entry = document.createElement('div');
+      entry.className = 'entry';
+      entry.innerHTML = `
+        <strong>Name:</strong> ${name}<br>
+        <strong>Department:</strong> ${department}<br>
+        <strong>Roll No:</strong> ${rollNo}<br>
+        <strong>Year:</strong> ${year}
+      `;
+      dataList.appendChild(entry);
+      form.reset();
+    });
+  </script>
+
 </body>
 </html>
